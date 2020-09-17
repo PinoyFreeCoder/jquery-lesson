@@ -1,0 +1,15 @@
+.red-text{
+    color: red !important;
+    font-weight: bold;
+    letter-spacing: 42px;
+}
+
+.green-text {
+    color: green;
+    font-weight: bold;
+    letter-spacing: 42px;
+}
+
+a{
+    text-decoration: none;
+}

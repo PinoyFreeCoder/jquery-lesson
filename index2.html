@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1 id="header1" class="green-text">PinoyFreeCoder</h1>
+    
+    <select id="select1">
+         <option value="option1">option1</option>
+         <option value="option2">option2</option>
+         <option value="option3">option3</option>
+    </select>
+
+    <select id="select2">
+       
+    </select>
+
+
+    <input type="text" name="firstname" id="name">
+    <button id="btn">Click</button>
+    <hr>
+    <br>
+    <br>
+    <button id="hide">Hide</button>
+    <button id="remove">Remove</button>
+    <button id="show">Show</button>
+    
+    <hr>
+    <br>
+    <br>
+    <button id="css_btn">CSS button</button>
+    <hr>
+    <br>
+    <br>
+ 
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+    <script>
+        
+        
+         var header1 = $("#header1");
+        // var header2 = $("#header2");
+        // var lists = $(".list");
+
+        // console.log(lists);
+
+        $(document).ready(function(){
+
+            // $('#btn-hide').click(function(){
+
+            //     header1.animate({
+            //         fontSize: '52px',
+            //         color: 'red',
+            //         letterSpacing: '32px'
+            //     })
+                
+            // })
+
+            // $('#btn-show').click(function(){
+
+            //      header1.slideUp();
+            // })
+
+
+            //Get and Set
+
+            var input = $('#name');
+
+            $('#select1').on('change', function(){
+               var select_value = this.value;
+
+               if(select_value == "option1"){
+                   $('#select2').html(`
+                        <option value="option4">option4</option>
+                        <option value="option5">option5</option>
+                        <option value="option6">option6</option>
+                   `)
+               }
+
+            })
+
+
+
+            $('#hide').on('click', function(){
+
+                 header1.hide();
+
+            });
+
+            $('#remove').on('click', function(){
+
+                $('#lists').empty();
+
+            });
+
+            $('#show').on('click', function(){
+
+                header1.show();
+
+            });
+
+            
+            
+            $('#css_btn').on('click', function(){
+
+            //    $('#header1').css("color", "red").animate({ fontSize : '52px', letterSpacing : '32px' });
+                 
+                $('#header1').hasClass('red-text');
+
+            });
+
+
+
+
+            // document ready
+        })
+        
+    </script>
+</body>
+</html>
